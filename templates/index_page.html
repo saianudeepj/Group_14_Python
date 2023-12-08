@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        
+        <title>Video Games Sales Website</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            }
+            nav a{
+                
+                color: white;
+                text-decoration: none;
+                margin-right: 20px;
+            }
+            section{
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+            } 
+            footer{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 1em;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+   
+        </style>
+            
+    </head>
+    <body>
+        <header>
+        <h1>Welcome to Global Video Games Sales Website</h1>
+        </header>
+        <section>
+        <p>Where do you want to go?</p>
+        <ul>
+            <li><a href="{{ url_for('about')}}"> link to know about the global video games sales data.</a> </li>
+            <li><a href="{{ url_for('data')}}"> link to see the global video games sales data.</a> </li>
+        </ul>
+        </section>
+            
+    <footer>
+        <p>&copy; 2023 Global Video Games Sales</p>
+            </footer>
+    </body>
+</html>
+    

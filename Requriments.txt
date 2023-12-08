@@ -1,0 +1,5 @@
+Flask is used for website creation. The sqlite3 package is used for creating database and table is inserted in database. The pandas package is used for importing and reading the data from csv file and used the pathlib package.
+
+About the Data: The dataset offers a wealth of insights into the dynamics between platform and genre for the top 5000 video games worldwide. Observe which platforms are driving global sales, what genres have been most successful in different regions worldwide, and how these factors have changed over time. 
+
+Database: Created the global_videogame_sales database with videogames_sales table in the database. The complete data is present in one table.

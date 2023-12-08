@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        
+        <title>Video Games Sales Website</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        
+         footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+        section
+        {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+    </style>
+    </head>
+    <body>
+    <header>
+        <h1>Global Video Games Sales dataset</h1>
+        </header>
+    
+    <section>
+        <h1>About the global video games sales dataset</h1>
+        <p> The dataset offers a wealth of insights into the dynamics between platform and genre for the top 5000 video games worldwide. Observe which platforms are driving global sales, what genres have been most successful in different regions across the world, and how both of these factors have changed over time. Analyze this data to inform your understanding of the gaming industry and discover trends propelling game developers to success! </p>
+        <p>The dataset is collected from Kaggle: </p>
+        <ul>
+            <li><a href="{{ url_for('about')}}"> https://www.kaggle.com/datasets/thedevastator/global-video-game-sales</a> </li> 
+            
+        <p> Columns in dataset</p>
+        
+<p> Rank: Ranking of the game based on global sales. (Integer)</p> 
+        
+<p> Name: Name of the game. (String)</p>
+        
+<p> Platform: Platform the game was released on. (String)</p>
+        
+<p> Year: Year the game was released on. (String)</p>
+        
+<p> Genre: Genre of the game. (String)</p>
+        
+<p> Publisher: Publisher of the game. (String)</p>
+        
+<p> NA_String: Sales of the game in North America. (Float)</p>
+        
+<p> EU_Sales: Sales of the game in Europe. (Float)</p>
+
+<p> JP_Sales: Sales of the game in Japan. (Float)</p>
+        
+<p> Other_Sales: Sales of the game in other regions. (Float)</p>
+        
+<p> Global_Sales: Total sales of the game worldwide. (Float)</p>
+        
+
+    <div>
+        <p> This dataset can be used for probing the relationship between video game expenditure and user satisfaction to understand consumer behavior. Examining the most popular platform-genre combinations in the top 5000 games to inform game development decisions.</p>
+        </div>
+        </section>
+       <footer>
+           <p>&copy; 2023 Global Video Games Sales</p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Video Games Sales Data Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  header{
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: lem;
+      } 
+      
+      footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: lem;
+         bottom: 0;
+         width: 100%;
+      }
+    th, td {
+      border: 1px solid #add;
+      padding: 8px;
+      text-align: left;
+    }
+    td
+      {
+       background-color: #98fb98;
+      }
+    th {
+        
+      background-color:#32cd32;
+    }
+      
+    .hidden-row {
+      display: none;
+    }
+      #moreBtn{
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+  </style>
+</head>
+ <body>
+     <header>
+         <h1>Global Video Game Sales</h1>
+         
+     </header>
+<div class="table-container">
+    <h1>Video Games Sales</h1>
+    <p>Click the "Show More Data" button to display all the 5000 video games sales details.</p>
+    <p style="font-size:25px"><center><b><h2>The below is the data collected from Kaggle</h2></b></center></p>
+      
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Platform</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                    <th>Publisher</th>
+                    <th>NA_Sales</th>
+                    <th>EU_Sales</th>
+                    <th>JP_Sales</th>
+                    <th>Other_Sales</th>
+                    <th>Global_Sales</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in videogame_sales %}
+                <tr class="hidden-row">
+                    <td>{{ s[0] }}</td>
+                    <td>{{ s[1] }}</td>
+                    <td>{{ s[2] }}</td>
+                    <td>{{ s[3] }}</td>
+                    <td>{{ s[4] }}</td>
+                    <td>{{ s[5] }}</td>
+                    <td>{{ s[6] }}</td>
+                    <td>{{ s[7] }}</td>
+                    <td>{{ s[8] }}</td>
+                    <td>{{ s[9] }}</td>
+                    <td>{{ s[10] }}</td>
+                
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <button id="moreBtn" onclick="showMore()">Show More Data</button>
+    </div>  
+    <script>
+        var hiddenRows=document.querySelectorAll('.hidden-row');
+        var moreBtn=document.getElementById('moreBtn');
+        
+        function showMore(){
+            hiddenRows.forEach(function(row){
+                row.style.display='table-row';
+            });
+            moreBtn.style.display='none';
+        }
+        for (var i=0;i<20&&i<hiddenRows.length;i++){
+            hiddenRows[i].style.display='table-row';
+        }
+        if (hiddenRows.length>20){
+            morebtn.style.display="block";
+        }
+     </script>
+     
+     <footer>
+         <p>&copy; 2023 Global Video Games Sales</p>
+    </footer>
+        
+</body>
+</html>
+
